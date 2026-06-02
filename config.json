@@ -1,5 +1,5 @@
 {
-  "project_name": "Verxify",
+  "project_name": "Navra",
   "environment": {"grid_size": 30, "difficulty": "medium", "obstacle_densities": {"easy": 0.2, "medium": 0.35, "hard": 0.5}, "moving_obstacles": 3, "seed": 42},
   "environment_3d": {"size": [20, 20, 8], "difficulty": "medium", "moving_obstacles": 5},
   "training": {"episodes": 500, "max_steps": 400, "progress_interval": 50},
