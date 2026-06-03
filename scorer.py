@@ -1,4 +1,4 @@
-"""Navigation scoring utilities."""
+"""Navigation scoring utilities for Navra."""
 from __future__ import annotations
 import numpy as np
 

@@ -1,4 +1,4 @@
-"""3D warehouse environment generation and visualization."""
+"""Navra 3D warehouse environment generation and visualization."""
 from __future__ import annotations
 
 import json

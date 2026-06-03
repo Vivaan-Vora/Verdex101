@@ -1,4 +1,4 @@
-"""Environment difficulty analysis."""
+"""Environment difficulty analysis for Navra."""
 from __future__ import annotations
 from environment import WarehouseEnvironment
 from pathfinder import astar, manhattan
