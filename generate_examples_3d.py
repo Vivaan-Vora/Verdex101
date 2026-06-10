@@ -1,4 +1,4 @@
-"""Generate appealing 3D example diagrams for documentation."""
+"""Generate Navra 3D example diagrams for documentation."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -13,7 +13,7 @@ def generate_examples_3d(count: int = 4) -> None:
     diffs = ['easy', 'medium', 'hard', 'medium']
     for i in range(count):
         env = generate_environment_3d(size=(20, 20, 8), difficulty=diffs[i % len(diffs)], seed=400 + i)
-        plot_environment_3d(env, title=f'{diffs[i % len(diffs)].capitalize()} 3D Layout {i + 1}', path=out / f'environment3d_{i + 1}.png')
+        plot_environment_3d(env, title=f'{diffs[i % len(diffs)].capitalize()} Voxel Layout', path=out / f'environment3d_{i + 1}.png')
 
 
 if __name__ == '__main__':
