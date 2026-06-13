@@ -1,4 +1,4 @@
-"""Pathfinding algorithms."""
+"""Navra 2D pathfinding algorithms (BFS, Dijkstra, A*)."""
 from __future__ import annotations
 import heapq
 from collections import deque
