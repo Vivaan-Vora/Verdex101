@@ -17,7 +17,7 @@ from failure_logger import classify_failure
 ACTIONS=[(-1,0),(1,0),(0,-1),(0,1)]
 
 class DQN(nn.Module):
-    """Simple 10-64-64-4 network."""
+    """Feed-forward network for deep Q-value approximation."""
     def __init__(self):
         """Initialize MLP."""
         super().__init__(); self.net=nn.Sequential(nn.Linear(10,64),nn.ReLU(),nn.Linear(64,64),nn.ReLU(),nn.Linear(64,4))
