@@ -1,10 +1,10 @@
-# Verxify
+# Navra
 
 ## Foundation
 
-Verxify is a warehouse navigation intelligence simulator built for both 2D grid navigation and 3D voxel navigation. It combines classical planning and reinforcement learning so teams can test route quality, reliability, and failure behavior under realistic warehouse constraints.
+Navra is a warehouse navigation intelligence simulator built for both 2D grid navigation and 3D voxel navigation. It combines classical planning and reinforcement learning so teams can test route quality, reliability, and failure behavior under realistic warehouse constraints.
 
-Navigation is often the biggest failure point in warehouse automation. When paths break due to floor changes, operations lose throughput and teams are forced into manual intervention. Verxify addresses this with a simulation-first workflow so teams can validate behavior before live deployment.
+Navigation is often the biggest failure point in warehouse automation. When paths break due to floor changes, operations lose throughput and teams are forced into manual intervention. Navra addresses this with a simulation-first workflow so teams can validate behavior before live deployment.
 
 The project is implemented in **Python** and uses **NumPy** for numerical processing, **PyTorch** for deep Q-network training, and **Matplotlib** for 2D and 3D visualizations.
 
