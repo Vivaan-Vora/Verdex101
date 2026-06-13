@@ -1,13 +1,72 @@
 {
   "project_name": "Navra",
-  "environment": {"grid_size": 30, "difficulty": "medium", "obstacle_densities": {"easy": 0.2, "medium": 0.35, "hard": 0.5}, "moving_obstacles": 3, "seed": 42},
-  "environment_3d": {"size": [20, 20, 8], "difficulty": "medium", "moving_obstacles": 5},
-  "training": {"episodes": 500, "max_steps": 400, "progress_interval": 50},
-  "q_learning": {"learning_rate": 0.1, "discount_factor": 0.95, "epsilon_start": 1.0, "epsilon_end": 0.05, "epsilon_decay": 0.995},
-  "dqn": {"learning_rate": 0.001, "batch_size": 32, "buffer_size": 5000, "target_update_interval": 100, "gamma": 0.95},
-  "diagnostics": {"degradation_per_collision": 1.25, "degradation_per_stuck_event": 1.0, "maintenance_cycle_steps": 20, "degraded_threshold": 30, "critical_threshold": 10},
-  "vns": {"path_efficiency_weight": 0.5, "smoothness_weight": 0.3, "obstacle_avoidance_weight": 0.2},
-  "failure_logger": {"timeout_threshold_steps": 400, "loop_threshold_revisits": 10, "stuck_threshold_steps": 8, "collision_storm_hits": 5, "collision_storm_window": 10},
-  "comparator": {"num_test_environments": 10},
-  "paths": {"q_table": "models/q_table.json", "dqn_model": "models/dqn_model.pt", "log_csv": "logs/training_log.csv", "environment_dir": "environments", "plot_dir": "logs/plots", "reports_dir": "reports"}
+  "environment": {
+    "grid_size": 30,
+    "difficulty": "medium",
+    "obstacle_densities": {
+      "easy": 0.2,
+      "medium": 0.35,
+      "hard": 0.5
+    },
+    "moving_obstacles": 3,
+    "seed": 42
+  },
+  "environment_3d": {
+    "size": [
+      20,
+      20,
+      8
+    ],
+    "difficulty": "medium",
+    "moving_obstacles": 5
+  },
+  "training": {
+    "episodes": 500,
+    "max_steps": 400,
+    "progress_interval": 50
+  },
+  "q_learning": {
+    "learning_rate": 0.1,
+    "discount_factor": 0.95,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay": 0.995
+  },
+  "dqn": {
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "buffer_size": 5000,
+    "target_update_interval": 100,
+    "gamma": 0.95
+  },
+  "diagnostics": {
+    "degradation_per_collision": 1.25,
+    "degradation_per_stuck_event": 1.0,
+    "maintenance_cycle_steps": 20,
+    "degraded_threshold": 30,
+    "critical_threshold": 10
+  },
+  "vns": {
+    "path_efficiency_weight": 0.5,
+    "smoothness_weight": 0.3,
+    "obstacle_avoidance_weight": 0.2
+  },
+  "failure_logger": {
+    "timeout_threshold_steps": 400,
+    "loop_threshold_revisits": 10,
+    "stuck_threshold_steps": 8,
+    "collision_storm_hits": 5,
+    "collision_storm_window": 10
+  },
+  "comparator": {
+    "num_test_environments": 10
+  },
+  "paths": {
+    "q_table": "models/q_table.json",
+    "dqn_model": "models/dqn_model.pt",
+    "log_csv": "logs/training_log.csv",
+    "environment_dir": "environments",
+    "plot_dir": "logs/plots",
+    "reports_dir": "reports"
+  }
 }
