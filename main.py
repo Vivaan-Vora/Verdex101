@@ -28,7 +28,7 @@ def load_config(path: Path=Path('config.json')) -> dict:
 
 def parse_args() -> argparse.Namespace:
     """Parse CLI arguments."""
-    p=argparse.ArgumentParser(description='Navra warehouse navigation simulator')
+    p=argparse.ArgumentParser(description='Navra warehouse navigation simulator', epilog='See README.md for mode details.')
     p.add_argument('--mode',required=True,choices=['train-q','train-dqn','test','astar','benchmark','replay','diagnostics','score','analyze-env','failures','compare','test-3d','astar-3d'])
     p.add_argument('--difficulty',choices=['easy','medium','hard'],default=None)
     p.add_argument('--episodes',type=int,default=None)
