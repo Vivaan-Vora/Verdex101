@@ -32,7 +32,7 @@ The project is implemented in **Python** and uses **NumPy** for numerical proces
 ## Repository Structure
 
 ```text
-verxify/
+navra/
 ├── main.py
 ├── environment.py
 ├── environment3d.py
