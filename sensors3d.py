@@ -1,4 +1,4 @@
-"""Sensor simulation utilities for 3D navigation."""
+"""Navra 3D voxel sensor ray simulation."""
 from __future__ import annotations
 
 import math
