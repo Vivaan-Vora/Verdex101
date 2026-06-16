@@ -9,7 +9,7 @@ Navigation is often the biggest failure point in warehouse automation. When path
 The project is implemented in **Python** and uses **NumPy** for numerical processing, **PyTorch** for deep Q-network training, and **Matplotlib** for 2D and 3D visualizations.
 
 <p align="center">
-  <img src="examples/layout-two-d.png" alt="Two-D Layout" width="75%" />
+  <img src="examples/layout-comparison.png" alt="Grid Layout and Voxel Layout" width="75%" />
 </p>
 
 ## Core Capabilities
