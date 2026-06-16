@@ -22,11 +22,11 @@ The project is implemented in **Python** and uses **NumPy** for numerical proces
 - Logging, diagnostics, scoring, failure analysis, and benchmark tools
 
 <p align="center">
-  <img src="examples/layout-two-d.png" alt="Two-D Layout" width="75%" />
+  <img src="examples/layout-grid.png" alt="Grid Layout" width="75%" />
 </p>
 
 <p align="center">
-  <img src="examples/layout-three-d.png" alt="Three-D Layout" width="75%" />
+  <img src="examples/layout-voxel.png" alt="Voxel Layout" width="75%" />
 </p>
 
 ## Repository Structure
