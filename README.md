@@ -1,8 +1,8 @@
-# Grid-Nexus
+# Astra-Path
 
 ## Overview
 
-Grid-Nexus is a Python project for 2D warehouse robot navigation simulation. It combines classic pathfinding and reinforcement learning so agents can navigate in changing environments with static and moving obstacles.
+Astra-Path is a Python project for 2D warehouse robot navigation simulation. It combines classic pathfinding and reinforcement learning so agents can navigate in changing environments with static and moving obstacles.
 
 The project is designed to be clear and practical. It includes environment generation, sensor simulation, Q-learning, DQN, benchmarking, diagnostics, and visual analysis tools.
 
@@ -14,7 +14,7 @@ Warehouse robots that rely on fixed paths fail when layouts change. A moved box,
 
 ## Solution
 
-Grid-Nexus trains and evaluates navigation policies in simulation before deployment. It measures not just success, but also efficiency, health, and failure behavior.
+Astra-Path trains and evaluates navigation policies in simulation before deployment. It measures not just success, but also efficiency, health, and failure behavior.
 
 ## What Was Built
 
@@ -37,7 +37,7 @@ Core libraries:
 ## Repository Structure
 
 ```text
-grid-nexus/
+astra-path/
 ├── main.py
 ├── environment.py
 ├── sensors.py

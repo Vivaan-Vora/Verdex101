@@ -8,7 +8,8 @@ def generate_examples(count: int=5) -> None:
     out=Path('examples'); out.mkdir(parents=True,exist_ok=True); dif=['easy','medium','hard','medium','easy']
     for i in range(count):
         env=generate_environment(difficulty=dif[i%len(dif)],seed=100+i)
-        plot_environment(env,title=f'Example {i+1}',path=out/f'environment_{i+1}.png')
+        title=f'{dif[i%len(dif)].capitalize()} Layout Example {i+1}'
+        plot_environment(env,title=title,path=out/f'environment_{i+1}.png')
 
 if __name__=='__main__':
     """Script entry."""

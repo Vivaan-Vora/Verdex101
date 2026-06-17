@@ -6,6 +6,8 @@ from dataclasses import dataclass
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+from matplotlib.patches import Patch
 
 @dataclass
 class WarehouseEnvironment:
@@ -74,10 +76,39 @@ def load_environment(path: Path) -> WarehouseEnvironment:
 
 def plot_environment(env: WarehouseEnvironment, title: str='Environment', path: Path|None=None) -> None:
     """Plot environment map."""
-    view=env.grid.astype(float)
-    for r,c in env.moving_obstacles: view[r,c]=0.5
-    view[env.start]=0.75; view[env.goal]=0.25
-    plt.figure(figsize=(6,6)); plt.imshow(view,cmap='viridis'); plt.title(title); plt.colorbar()
-    if path: path.parent.mkdir(parents=True,exist_ok=True); plt.savefig(path,dpi=140,bbox_inches='tight')
-    else: plt.show()
+    # Cell encoding: 0 free, 1 static obstacle, 2 moving obstacle, 3 start, 4 goal
+    view=np.zeros_like(env.grid, dtype=np.int32)
+    view[env.grid == 1] = 1
+    for r,c in env.moving_obstacles:
+        view[r,c] = 2
+    view[env.start] = 3
+    view[env.goal] = 4
+
+    cmap=ListedColormap([
+        '#f8fafc',  # free
+        '#1f2937',  # wall
+        '#f59e0b',  # moving obstacle
+        '#2563eb',  # start
+        '#16a34a',  # goal
+    ])
+    legend=[
+        Patch(facecolor='#f8fafc', edgecolor='black', label='Open Cell'),
+        Patch(facecolor='#1f2937', edgecolor='black', label='Shelf / Wall'),
+        Patch(facecolor='#f59e0b', edgecolor='black', label='Moving Obstacle'),
+        Patch(facecolor='#2563eb', edgecolor='black', label='Start'),
+        Patch(facecolor='#16a34a', edgecolor='black', label='Goal'),
+    ]
+
+    fig, ax = plt.subplots(figsize=(7,7))
+    ax.imshow(view, cmap=cmap, vmin=0, vmax=4, origin='upper')
+    ax.set_title(title, fontsize=13, fontweight='bold')
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.legend(handles=legend, loc='lower center', bbox_to_anchor=(0.5, -0.08), ncol=2, frameon=False)
+    fig.tight_layout()
+    if path:
+        path.parent.mkdir(parents=True,exist_ok=True)
+        fig.savefig(path,dpi=180,bbox_inches='tight')
+    else:
+        plt.show()
     plt.close()
