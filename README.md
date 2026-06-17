@@ -89,6 +89,12 @@ Navra supports a unified workflow for both 2D and 3D navigation experiments.
 
 Pinned versions live in `requirements.txt` (NumPy, PyTorch, Matplotlib).
 
+## Troubleshooting
+
+- If plots do not appear, confirm Matplotlib is installed and writable output folders exist.
+- For unstable training, reduce obstacle density or increase `max_steps` in `config.json`.
+- Use `--seed` on the CLI to reproduce a specific environment layout.
+
 ## Configuration
 
 The Navra `config.json` file includes settings for both environment types, training hyperparameters, diagnostics thresholds, navigation scoring weights, and output paths.
