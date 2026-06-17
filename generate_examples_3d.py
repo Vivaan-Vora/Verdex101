@@ -7,6 +7,7 @@ from environment3d import generate_environment_3d, plot_environment_3d
 
 
 def generate_examples_3d(count: int = 4) -> None:
+    # Fixed seeds keep voxel previews stable across runs.
     """Generate and save 3D environment diagrams."""
     out = Path('examples')
     out.mkdir(parents=True, exist_ok=True)
