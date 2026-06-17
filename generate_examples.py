@@ -4,6 +4,7 @@ from pathlib import Path
 from environment import generate_environment, plot_environment
 
 def generate_examples(count: int=5) -> None:
+    # Seeds are deterministic for reproducible README assets.
     """Generate and save sample environment images."""
     out=Path('examples'); out.mkdir(parents=True,exist_ok=True); dif=['easy','medium','hard','medium','easy']
     for i in range(count):
