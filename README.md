@@ -91,6 +91,10 @@ Navra supports a unified workflow for both 2D and 3D navigation experiments.
 4. Log reward, stability, health, and failure metrics.
 5. Analyze outputs with plots, leaderboards, and diagnostics reports.
 
+## Output Paths
+
+Training artifacts are written to the paths configured in `config.json` (`models/`, `logs/`, and `reports/`).
+
 ## Dependencies
 
 Pinned versions live in `requirements.txt` (NumPy, PyTorch, Matplotlib).
