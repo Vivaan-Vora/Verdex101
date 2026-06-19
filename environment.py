@@ -45,7 +45,8 @@ def bfs_path_exists(grid: np.ndarray, start: tuple[int,int], goal: tuple[int,int
                 seen.add(n); q.append(n)
     return False
 
-def generate_environment(grid_size: int=30, difficulty: str='medium', moving_obstacle_count: int=3, seed: int|None=None) -> WarehouseEnvironment:
+def generate_environment(  # Uses config seed when none is provided
+grid_size: int=30, difficulty: str='medium', moving_obstacle_count: int=3, seed: int|None=None) -> WarehouseEnvironment:
     """Generate valid warehouse map."""
     rng=random.Random(seed); dens={'easy':0.2,'medium':0.35,'hard':0.5}; d=dens[difficulty]
     start=(1,1); goal=(grid_size-2,grid_size-2)
