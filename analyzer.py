@@ -1,4 +1,4 @@
-"""Navra environment difficulty analysis and reliability metrics."""
+"""Routix environment difficulty analysis and reliability metrics."""
 from __future__ import annotations
 from environment import WarehouseEnvironment
 from pathfinder import astar, manhattan

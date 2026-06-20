@@ -1,4 +1,4 @@
-"""Navra policy comparator for Q-learning and DQN agents."""
+"""Routix policy comparator for Q-learning and DQN agents."""
 from __future__ import annotations
 from datetime import datetime
 from pathlib import Path

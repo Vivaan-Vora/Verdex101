@@ -1,4 +1,4 @@
-"""Navra 2D environment generation module."""
+"""Routix 2D environment generation module."""
 from __future__ import annotations
 import json, random
 from collections import deque

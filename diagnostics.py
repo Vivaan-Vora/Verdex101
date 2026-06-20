@@ -50,7 +50,7 @@ def diagnostics_report(rows: list[dict], reports_dir: Path) -> Path:
     reports_dir.mkdir(parents=True, exist_ok=True)
     health = [float(r.get('final_health',100.0)) for r in rows] or [100.0]
     text = '\n'.join([
-        'Navra Diagnostics Report',
+        'Routix Diagnostics Report',
         '='*30,
         f'Training episodes analyzed: {len(rows)}',
         f'Average final health: {sum(health)/len(health):.2f}',

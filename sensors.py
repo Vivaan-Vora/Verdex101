@@ -1,4 +1,4 @@
-"""Navra 2D sensor simulation with eight ray directions."""
+"""Routix 2D sensor simulation with eight ray directions."""
 from __future__ import annotations
 import math
 from pathlib import Path

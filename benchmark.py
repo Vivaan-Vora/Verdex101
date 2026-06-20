@@ -1,4 +1,4 @@
-"""Navra benchmark runner."""
+"""Routix benchmark runner."""
 from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime
@@ -10,7 +10,7 @@ from analyzer import compute_edi
 from scorer import compute_vns, print_vns_leaderboard
 
 def run_benchmark(config: dict, runs: int = 20, seed: int = 42) -> dict:
-    """Run Navra benchmark across 2D pathfinding methods."""
+    """Run Routix benchmark across 2D pathfinding methods."""
     methods={'A*':astar,'BFS':bfs,'Dijkstra':dijkstra}
     stats={m:{'success':0,'steps':0.0,'reward':0.0} for m in methods}
     vns_by_method=defaultdict(list)

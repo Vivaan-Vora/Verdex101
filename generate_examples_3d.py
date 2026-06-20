@@ -1,4 +1,4 @@
-"""Generate Navra 3D example diagrams for documentation."""
+"""Generate Routix 3D example diagrams for documentation."""
 from __future__ import annotations
 
 from pathlib import Path

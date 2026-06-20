@@ -1,10 +1,10 @@
-# Navra
+# Routix
 
 ## Overview
 
-Navra is a warehouse navigation intelligence simulator built for both 2D grid navigation and 3D voxel navigation. It combines classical planning and reinforcement learning so teams can test route quality, reliability, and failure behavior under realistic warehouse constraints.
+Routix is a warehouse navigation intelligence simulator built for both 2D grid navigation and 3D voxel navigation. It combines classical planning and reinforcement learning so teams can test route quality, reliability, and failure behavior under realistic warehouse constraints.
 
-Navigation is often the biggest failure point in warehouse automation. When paths break due to floor changes, operations lose throughput and teams are forced into manual intervention. Navra addresses this with a simulation-first workflow so teams can validate behavior before live deployment.
+Navigation is often the biggest failure point in warehouse automation. When paths break due to floor changes, operations lose throughput and teams are forced into manual intervention. Routix addresses this with a simulation-first workflow so teams can validate behavior before live deployment.
 
 The project is implemented in **Python** and uses **NumPy** for numerical processing, **PyTorch** for deep Q-network training, and **Matplotlib** for 2D and 3D visualizations.
 
@@ -32,7 +32,7 @@ The project is implemented in **Python** and uses **NumPy** for numerical proces
 ## Repository Structure
 
 ```text
-navra/
+routix/
 ├── main.py
 ├── environment.py
 ├── environment3d.py
@@ -69,7 +69,7 @@ python main.py --mode train-q --episodes 100
 
 ## Pipeline
 
-Navra supports a unified workflow for both 2D and 3D navigation experiments.
+Routix supports a unified workflow for both 2D and 3D navigation experiments.
 
 1. Generate a valid 2D or 3D warehouse layout.
 2. Simulate observations from the relevant sensor module.
@@ -79,6 +79,6 @@ Navra supports a unified workflow for both 2D and 3D navigation experiments.
 
 ## Configuration
 
-The Navra `config.json` file includes settings for both environment types, training hyperparameters, diagnostics thresholds, navigation scoring weights, and output paths.
+The Routix `config.json` file includes settings for both environment types, training hyperparameters, diagnostics thresholds, navigation scoring weights, and output paths.
 
 For 3D, `environment_3d` controls voxel size, difficulty, and moving obstacle count.

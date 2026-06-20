@@ -1,4 +1,4 @@
-"""Navra example image generator."""
+"""Routix example image generator."""
 from __future__ import annotations
 from pathlib import Path
 from environment import generate_environment, plot_environment
