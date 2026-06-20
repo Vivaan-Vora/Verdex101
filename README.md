@@ -59,16 +59,6 @@ navra/
 └── README.md
 ```
 
-## CLI Modes
-
-| Mode | Purpose |
-|------|---------|
-| `train-q` | Train tabular Q-learning agent |
-| `train-dqn` | Train deep Q-network agent |
-| `astar` / `astar-3d` | Run baseline planning |
-| `benchmark` | Compare pathfinding methods |
-| `diagnostics` | Generate health reports |
-
 ## Quickstart
 
 ```bash
@@ -76,10 +66,6 @@ pip install -r requirements.txt
 python main.py --mode astar --difficulty medium
 python main.py --mode train-q --episodes 100
 ```
-
-## Evaluation Modes
-
-Navra supports side-by-side evaluation of classical planners and learned policies. Use `benchmark` for pathfinding comparisons and `compare` for agent rollouts on shared environments.
 
 ## Pipeline
 
@@ -91,34 +77,8 @@ Navra supports a unified workflow for both 2D and 3D navigation experiments.
 4. Log reward, stability, health, and failure metrics.
 5. Analyze outputs with plots, leaderboards, and diagnostics reports.
 
-## Output Paths
-
-Training artifacts are written to the paths configured in `config.json` (`models/`, `logs/`, and `reports/`).
-
-## Dependencies
-
-Pinned versions live in `requirements.txt` (NumPy, PyTorch, Matplotlib).
-
-## Troubleshooting
-
-- If plots do not appear, confirm Matplotlib is installed and writable output folders exist.
-- For unstable training, reduce obstacle density or increase `max_steps` in `config.json`.
-- Use `--seed` on the CLI to reproduce a specific environment layout.
-
 ## Configuration
 
 The Navra `config.json` file includes settings for both environment types, training hyperparameters, diagnostics thresholds, navigation scoring weights, and output paths.
 
 For 3D, `environment_3d` controls voxel size, difficulty, and moving obstacle count.
-
-## Training Tips
-
-Start with `train-q` on medium difficulty before moving to DQN or 3D modes. Review `logs/training_log.csv` and diagnostics reports after each run to catch instability early.
-
-## Lessons From This Project
-
-Building Navra showed that supporting both 2D and 3D navigation in one system is useful but requires careful design. Good simulation setup matters because changing obstacles and sensor noise can quickly change agent results. Reward alone is not enough to judge performance, so adding diagnostics, failure tracking, and scoring made it easier to understand what was working and what needed improvement. Keeping modules separate for environment setup, sensing, planning, training, and analysis also made the project easier to build and extend over time.
-
-## License
-
-Navra is released under the MIT License. See `LICENSE` for details.
